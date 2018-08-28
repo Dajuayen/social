@@ -35,7 +35,6 @@ def post_load_hook():
         if 'done' not in self._fields:
             return self.action_feedback_original(feedback=feedback)
 
-
         message = self.env['mail.message']
         if feedback:
             self.write(dict(feedback=feedback))

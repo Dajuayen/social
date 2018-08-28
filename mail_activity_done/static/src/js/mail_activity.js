@@ -1,6 +1,5 @@
-//-*- coding: utf-8 -*-
 //Copyright2018 Eficent <http://www.eficent.com>
-//License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+//License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
 odoo.define('mail.Activity.done', function(require) {
 "use strict";

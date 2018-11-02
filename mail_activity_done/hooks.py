@@ -3,6 +3,7 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/lgpl.html).
 
 from odoo.addons.mail.models.mail_activity import MailActivity
+from odoo import fields
 
 
 def pre_init_hook(cr):
@@ -42,6 +43,7 @@ def post_load_hook():
             record = self.env[activity.res_model].browse(activity.res_id)
             # ----  START OF PATCH
             activity.done = True
+            activity.date_done = fields.Date.today()
             # ----  END OF PATCH
             record.message_post_with_view(
                 'mail.message_activity_done',
